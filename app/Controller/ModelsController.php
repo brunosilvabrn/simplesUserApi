@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 use App\Model\Users;
+use App\Model\AddUser;
 /*
 * Controlador rota de usuarios
 */
@@ -14,7 +15,7 @@ class ModelsController {
 			$model = new Users();
 			echo $model->getUsers();
 
-		}else if ($url[1] == "user" && isset($url[2])) {
+		}elseif ($url[1] == "user" && isset($url[2])) {
 
 			if (is_numeric($url[2])) {
 
@@ -23,9 +24,17 @@ class ModelsController {
 
 			}else {
 				echo json_encode(["Error" => "Id invalid"]);
-			}		
+			}	
+
+		}elseif($url[1] == "new" && $url[2] == "user" && !isset($url[3])) {
+
+			$model = new AddUser;
+			echo $model->novoUsuario();
+
+
 		}else {
 			echo json_encode(["Error" => "Invalid url parameter"]);
+
 		}
 	}	
 }

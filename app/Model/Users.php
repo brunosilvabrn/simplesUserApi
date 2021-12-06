@@ -18,7 +18,7 @@ class Users {
 		$json = [];
 
 		foreach ($dados as $value) {
-			$valor = ['id'=> $value['id'], 'nome' => $value["name"], 'telefone' => $value["phone"]];
+			$valor = ['id'=> $value['id'], 'nome' => $value["name"], 'email' => $value["email"],'telefone' => $value["phone"], 'data' => $value["date"]];
 			array_push($json, $valor);
 		}
 
