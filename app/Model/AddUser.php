@@ -18,7 +18,8 @@ class AddUser {
 			$email = filter_var($_POST['email'], FILTER_DEFAULT);
 			$telefone = filter_var($_POST['telefone'], FILTER_DEFAULT);
 			$data = filter_var($_POST['data'], FILTER_DEFAULT);
-
+			$data = str_replace('-', '/', $data);
+			
 			if($this->addQuery($nome, $email, $telefone, $data)) {
 				return json_encode(['Sucess' => 'successfully registered user']);
 			}else {
