@@ -17,7 +17,7 @@ class MainRouter {
 	public function app() {
 
 		$rota = explode("/", $this->url);
-
+		// Chama controlador Models da API => api/{paramentros}
 		if ($rota[0] == "api") {
 			if (isset($rota[1]) && !empty($rota[1])) {
 				$controlador = new ModelsController;
