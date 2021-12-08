@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>new user</title>
+	<style>
+		form {
+			margin: 30px;
+		}
+
+		form input{
+			display: block;
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Novo Usuário</h1>
+	<!-- Configurar a rota do link para sua aplicação http://meudominio/api-rest/api/new/user -->
+	<form method="POST" action="http://localhost/api-rest/api/new/user">
+		<input type="text" name="nome" placeholder="nome">
+		<input type="text" name="email" placeholder="email">
+		<input type="text" name="telefone" placeholder="telefone">
+		<input type="date" name="data">
+		<input type="submit" name="" value="Enviar">
+	</form>
+</body>
+</html>
