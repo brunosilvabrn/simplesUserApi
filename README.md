@@ -1,2 +1,2 @@
-# Users API - PHP
-API para gerenciamento de usuários feito com php.
+# Simples API Gerenciamento de usuários- PHP
+
